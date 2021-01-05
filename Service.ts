@@ -43,6 +43,7 @@ class Service extends BaseService {
         // Запуск воркера
         await this.worker.startWorker();
 
+        // Запуск транспорта на основе соединения
         if (this.transport.isPermanentConnection) {
             await this.transport.startTransport();
         }
