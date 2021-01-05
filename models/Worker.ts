@@ -1,9 +1,10 @@
+import { BaseService } from '../BaseService';
 import { ServiceInterface } from '../interfaces/ServiceInterface';
 
 /**
  * Класс для работы с Worker
  */
-export class Worker {
+export class Worker extends BaseService {
 
     private options: ServiceInterface;
     private isMaster: boolean;
@@ -16,6 +17,8 @@ export class Worker {
         options: ServiceInterface,
         isMaster
     ) {
+        super();
+
         this.options = options;
         this.isMaster = isMaster;
     }

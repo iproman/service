@@ -1,3 +1,4 @@
+import { BaseService } from './BaseService';
 import { ServiceInterface } from './interfaces/ServiceInterface';
 import { TransportInterface } from './interfaces/TransportInterface';
 import { WorkerInterface } from './interfaces/WorkerInterface';
@@ -9,7 +10,7 @@ import { Worker } from './models/Worker';
 /**
  * MainService
  */
-class MainService {
+class MainService extends BaseService {
     private isMaster: boolean;
 
     private cluster: Cluster;
@@ -23,6 +24,7 @@ class MainService {
      * @param options
      */
     constructor(options: ServiceInterface) {
+        super();
 
         this.cluster = new Cluster(options, this.isMaster);
         this.transport = new Transport(options).transport;

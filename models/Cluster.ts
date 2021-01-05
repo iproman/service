@@ -1,14 +1,17 @@
+import { BaseService } from '../BaseService';
 import { ServiceInterface } from '../interfaces/ServiceInterface';
 
 /**
  * Класс для работы с Cluster
  */
-export class Cluster {
+export class Cluster extends BaseService {
 
     private readonly options: ServiceInterface;
     private isMaster: boolean;
 
     constructor(options: ServiceInterface, isMaster: boolean) {
+        super();
+
         this.options = options;
         this.isMaster = isMaster;
     }

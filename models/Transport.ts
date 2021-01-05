@@ -1,16 +1,19 @@
+import { BaseService } from '../BaseService';
 import { ServiceInterface } from '../interfaces/ServiceInterface';
 import { TransportInterface } from '../interfaces/TransportInterface';
 
 /**
  * Класс для работы с Transport
  */
-export class Transport {
+export class Transport extends BaseService {
     private options: ServiceInterface;
 
     /**
      * @param options
      */
     constructor(options: ServiceInterface) {
+        super();
+
         this.options = options;
     }
 
