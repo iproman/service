@@ -2,5 +2,5 @@
  * WorkerInterface
  */
 export interface WorkerInterface {
-    startWorker()
+    startWorker(): void;
 }
