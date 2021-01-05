@@ -1,10 +1,11 @@
 import { BaseService } from '../BaseService';
 import { ServiceInterface } from '../interfaces/ServiceInterface';
+import { ClusterInterface } from '../interfaces/ClusterInterface';
 
 /**
  * Класс для работы с Cluster
  */
-export class Cluster extends BaseService {
+export class Cluster extends BaseService implements ClusterInterface {
 
     private readonly options: ServiceInterface;
 
