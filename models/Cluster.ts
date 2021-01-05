@@ -38,7 +38,7 @@ export class Cluster extends BaseService implements ClusterInterface {
     /**
      * Вид кластера
      */
-    public get mode() {
+    public get mode(): boolean {
         return !!this.options;
     }
 
