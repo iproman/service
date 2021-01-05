@@ -37,7 +37,7 @@ class MainService {
     async start() {
 
         // Запуск кластера
-        this.cluster.startCluster();
+        await this.cluster.startCluster();
 
         // Запуск воркера
         await this.worker.startWorker();
