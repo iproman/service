@@ -36,4 +36,11 @@ export class Cluster {
     public get mode() {
         return !!this.options;
     }
+
+    /**
+     * Свойства кластер
+     */
+    public get clusterOptions() {
+        return this.mode ?? this.options.cluster
+    }
 }
