@@ -9,6 +9,10 @@ export class Cluster extends BaseService {
     private readonly options: ServiceInterface;
     private isMaster: boolean;
 
+    /**
+     * @param options
+     * @param isMaster
+     */
     constructor(options: ServiceInterface, isMaster: boolean) {
         super();
 
