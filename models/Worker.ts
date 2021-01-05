@@ -1,10 +1,11 @@
 import { BaseService } from '../BaseService';
 import { ServiceInterface } from '../interfaces/ServiceInterface';
+import { WorkerInterface } from '../interfaces/WorkerInterface';
 
 /**
  * Класс для работы с Worker
  */
-export class Worker extends BaseService {
+export class Worker extends BaseService implements WorkerInterface {
 
     private options: ServiceInterface;
 

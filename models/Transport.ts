@@ -5,7 +5,7 @@ import { TransportInterface } from '../interfaces/TransportInterface';
 /**
  * Класс для работы с Transport
  */
-export class Transport extends BaseService {
+export class Transport extends BaseService implements TransportInterface {
     private options: ServiceInterface;
 
     /**
