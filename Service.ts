@@ -10,7 +10,7 @@ import { Worker } from './models/Worker';
 /**
  * MainService
  */
-class MainService extends BaseService {
+class Service extends BaseService {
 
     private cluster: Cluster;
     private transport: TransportInterface;
