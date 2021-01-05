@@ -11,13 +11,11 @@ export class Cluster extends BaseService {
 
     /**
      * @param options
-     * @param isMaster
      */
-    constructor(options: ServiceInterface, isMaster: boolean) {
+    constructor(options: ServiceInterface) {
         super();
 
         this.options = options;
-        this.isMaster = isMaster;
     }
 
     /**

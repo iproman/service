@@ -11,7 +11,6 @@ import { Worker } from './models/Worker';
  * MainService
  */
 class MainService extends BaseService {
-    private isMaster: boolean;
 
     private cluster: Cluster;
     private transport: TransportInterface;
@@ -26,9 +25,9 @@ class MainService extends BaseService {
     constructor(options: ServiceInterface) {
         super();
 
-        this.cluster = new Cluster(options, this.isMaster);
+        this.cluster = new Cluster(options);
         this.transport = new Transport(options).transport;
-        this.worker = new Worker(options, this.isMaster);
+        this.worker = new Worker(options);
 
         this.clusterOptions = this.cluster.clusterOptions;
     }

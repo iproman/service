@@ -11,16 +11,13 @@ export class Worker extends BaseService {
 
     /**
      * @param options
-     * @param isMaster
      */
     constructor(
-        options: ServiceInterface,
-        isMaster
+        options: ServiceInterface
     ) {
         super();
 
         this.options = options;
-        this.isMaster = isMaster;
     }
 
 
