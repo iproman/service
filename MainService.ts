@@ -43,7 +43,7 @@ class MainService {
         await this.worker.startWorker();
 
         if (this.transport.isPermanentConnection) {
-            this.transport.startTransport();
+            await this.transport.startTransport();
         }
     }
 }
