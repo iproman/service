@@ -20,4 +20,20 @@ export class Worker {
         this.options = options;
         this.isMaster = isMaster;
     }
+
+
+    /**
+     * Запуск воркера
+     *
+     * todo: логика запуска обработчика запросов
+     *
+     * ответ: Без понятий, как это реализовывать,
+     * я не писал ничего на node js дальше обычной работы с heroku и
+     * написания обычного API с помощью express.
+     */
+    public async startWorker() {
+        if (!this.isMaster) {
+            // do smt
+        }
+    }
 }
