@@ -20,4 +20,20 @@ export class Transport {
     get transport(): TransportInterface {
         return this.options.transport;
     }
+
+    /**
+     * Проверка на постоянность соединения
+     */
+    public get isPermanentConnection(): boolean {
+        return this.connection();
+    }
+
+    /**
+     * Логика соединения
+     *
+     * @private
+     */
+    private connection(): boolean {
+        return true;
+    }
 }

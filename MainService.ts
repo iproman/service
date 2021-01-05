@@ -41,6 +41,10 @@ class MainService {
 
         // Запуск воркера
         await this.worker.startWorker();
+
+        if (this.transport.isPermanentConnection) {
+
+        }
     }
 }
 
