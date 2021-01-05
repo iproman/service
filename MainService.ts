@@ -10,6 +10,7 @@ import { Worker } from './models/Worker';
  * MainService
  */
 class MainService {
+    private isMaster: boolean;
 
     private cluster: Cluster;
     private transport: TransportInterface;
@@ -21,9 +22,18 @@ class MainService {
      */
     constructor(options: ServiceInterface) {
 
-        this.cluster = new Cluster(options);
+        this.cluster = new Cluster(options, this.isMaster);
         this.transport = new Transport(options);
         this.worker = new Worker(options);
+    }
+
+    /**
+     * Основной метод запуска
+     */
+    async start() {
+
+        this.cluster.startCluster();
+
     }
 }
 
