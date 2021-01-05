@@ -4,5 +4,5 @@
 export interface TransportInterface {
     isPermanentConnection: boolean;
 
-    startTransport()
+    startTransport(): void;
 }

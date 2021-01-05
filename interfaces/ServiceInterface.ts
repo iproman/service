@@ -6,5 +6,5 @@ export interface ServiceInterface {
     cluster: any;
     isClusterMode: boolean;
 
-    start()
+    start(): void;
 }
