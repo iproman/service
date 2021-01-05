@@ -16,6 +16,8 @@ class MainService {
     private transport: TransportInterface;
     private worker: WorkerInterface;
 
+    private clusterOptions: string;
+
 
     /**
      * @param options
@@ -25,6 +27,8 @@ class MainService {
         this.cluster = new Cluster(options, this.isMaster);
         this.transport = new Transport(options);
         this.worker = new Worker(options);
+
+        this.clusterOptions = this.cluster.mode ?? options.cluster;
     }
 
     /**
