@@ -1,8 +1,10 @@
 /**
  * ServiceInterface
  */
+import { TransportInterface } from './TransportInterface';
+
 export interface ServiceInterface {
-    transport: Transport;
+    transport: TransportInterface;
     cluster: any;
     isClusterMode: boolean;
 
