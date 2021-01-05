@@ -7,7 +7,6 @@ import { ServiceInterface } from '../interfaces/ServiceInterface';
 export class Worker extends BaseService {
 
     private options: ServiceInterface;
-    private isMaster: boolean;
 
     /**
      * @param options

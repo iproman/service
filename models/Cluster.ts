@@ -7,7 +7,6 @@ import { ServiceInterface } from '../interfaces/ServiceInterface';
 export class Cluster extends BaseService {
 
     private readonly options: ServiceInterface;
-    private isMaster: boolean;
 
     /**
      * @param options
