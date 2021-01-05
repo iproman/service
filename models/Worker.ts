@@ -1,5 +1,4 @@
 import { ServiceInterface } from '../interfaces/ServiceInterface';
-import { ClusterInterface } from '../interfaces/ClusterInterface';
 
 /**
  * Класс для работы с Worker
