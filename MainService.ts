@@ -26,7 +26,7 @@ class MainService {
 
         this.cluster = new Cluster(options, this.isMaster);
         this.transport = new Transport(options).transport;
-        this.worker = new Worker(options, this.cluster.mode, this.isMaster);
+        this.worker = new Worker(options, this.isMaster);
 
         this.clusterOptions = this.cluster.mode ?? options.cluster;
     }
